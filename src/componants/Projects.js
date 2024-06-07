@@ -13,7 +13,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "Web App",
-      description: "Stage en cours de réalisation, développement d'une application web pour la prise de rendez-vous en ligne avec ReactJS et NodeJS.",
+      description: "Stage en cours de réalisation, développement d'une application web pour la prise de rendez-vous en ligne avec ReactJS et NodeJS.\n Durée : 2 mois. \n Outil : ReactJS, NodeJS, PostgreSQL.",
       imgUrl: projImg1,
     },
     {
