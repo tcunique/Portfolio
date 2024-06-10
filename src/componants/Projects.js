@@ -15,9 +15,9 @@ import { useInView } from 'react-intersection-observer';
 export const Projects = () => {
   const projects = [
     {
-      title: "Web App",
-      description: "Stage en cours de réalisation, développement d'une application web pour la prise de rendez-vous en ligne avec ReactJS et NodeJS.\n\n Date : Juin 2024 - Août 2024 \n Durée : 2 mois. \n Outil : ReactJS, NodeJS, PostgreSQL.",
-      imgUrl: projImg1,
+      title: "Google Cybersecurity",
+      description: "Certification Google Cybersecurity, cette certification m'a permis d'avoir une introduction à la cybersécurité. \n\n Date d'obtention : Janvier 2024 \n Outil : Google, SQL, Python, Linux, Wireshark.",
+      imgUrl: google_cyber,
     },
     {
       title: "eJPT",
@@ -33,6 +33,19 @@ export const Projects = () => {
 
   const project2 = [
     {
+      title: "Développement d'un Portfolio",
+      description: "Développement de mon portfolio en ReactJS. \n\n Date : Juin 2024 \n Outil : ReactJS, HTML, CSS.",
+      imgUrl: portfolio,
+    },
+    {
+      title: "Web App",
+      description: "Stage en cours de réalisation, développement d'une application web pour la prise de rendez-vous en ligne avec ReactJS et NodeJS.\n\n Date : Juin 2024 - Août 2024 \n Durée : 2 mois. \n Outil : ReactJS, NodeJS, PostgreSQL.",
+      imgUrl: projImg1,
+    },
+  ];
+
+  const project3 = [
+    {
       title: "Compétition Cybathlon",
       description: `Projet dans le cadre de la compétition Cybathlon en partenariat avec l'ISIR, développement d'une reconnaissance d'obstacle et transcription sur une carte d'occupation de l'espace. \n
 Date : Septembre 2023 - Mai 2024 \n Outil : Python, ROS, OpenCV, C++.`, 
@@ -43,19 +56,6 @@ Date : Septembre 2023 - Mai 2024 \n Outil : Python, ROS, OpenCV, C++.`,
       description: "Développement d'un jeu vidéo en C++ avec la bibliothque SFML. \n\n Date : Décembre 2024 - Janvier 2024 \n Outil : C++, SFML.",
       imgUrl: projImg4,
     },
-    {
-      title: "Google Cybersecurity",
-      description: "Certification Google Cybersecurity, cette certification m'a permis d'avoir une introduction à la cybersécurité. \n\n Date d'obtention : Janvier 2024 \n Outil : Google, SQL, Python, Linux, Wireshark.",
-      imgUrl: google_cyber,
-    },
-  ];
-
-  const project3 = [
-    {
-      title: "Développement d'un Portfolio",
-      description: "Développement de mon portfolio en ReactJS. \n\n Date : Juin 2024 \n Outil : ReactJS, HTML, CSS.",
-      imgUrl: portfolio,
-    }
   ];
 
   const { ref, inView } = useInView({
@@ -77,13 +77,13 @@ Date : Septembre 2023 - Mai 2024 \n Outil : Python, ROS, OpenCV, C++.`,
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                    <Nav.Link eventKey="first">Certification cybersécurité</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    <Nav.Link eventKey="second">Développement Web</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                    <Nav.Link eventKey="third">Projet école</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>
