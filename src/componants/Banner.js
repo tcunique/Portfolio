@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import { useInView } from 'react-intersection-observer';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,6 +12,11 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Triiger when 10% of the element is visible
+    triggerOnce : true,
+  });
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -53,15 +58,14 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Bienvenu sur mon Portfolio</span>
-                  <h1>{`Bonjour, je suis Thomas, `}<span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Pentester", "Bug Bounty Hunter" ]'></span><span className="wrap">{text}</span></h1>
-                  <p>Animé par une grande passion pour la cybersécurité et le développement web, mes stages et mes différents projets m'ont dotés d'une solide capacité de travail et d'autonomie. Je suis actuellement à la recherche d'un stage de 6 mois en pentesting ou dans tout domaine de la cybersécurité début Mars 2025.</p>
-                  <button onClick={handleButtonClick}><span>Let's Connect <ArrowRightCircle size={25} /></span></button>
-                </div>}
-            </TrackVisibility>
+            <div ref={ref}  
+              className={`fade-in-section ${inView ? 'is-visible' : ''}`}>
+              <span className="tagline">Bienvenu sur mon Portfolio</span>
+              <h1 className='banner-text'>{`Bonjour, je suis Thomas, `}<span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Pentester", "Bug Bounty Hunter" ]'></span><span className="wrap">{text}</span></h1>
+              <p>Animé par une grande passion pour la cybersécurité et le développement web, mes stages et mes différents projets m'ont dotés d'une solide capacité de travail et d'autonomie. Je suis actuellement à la recherche d'un stage de 6 mois en pentesting ou dans tout domaine de la cybersécurité début Mars 2025.</p>
+              <button onClick={handleButtonClick}><span>Let's Connect <ArrowRightCircle size={25} /></span></button>
+          
+            </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img" />
