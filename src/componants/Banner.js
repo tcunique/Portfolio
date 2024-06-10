@@ -10,7 +10,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Web Developer", "Pentester", "Bug Bounty Hunter"]
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300);
+  const [delta, setDelta] = useState(150);
   const period = 2000;
   const [hasAnimated, setHasAnimated] = useState(false);
   const { ref, inView } = useInView({
@@ -36,7 +36,7 @@ export const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta(prevDelta => prevDelta /2.5);
+      setDelta(prevDelta => prevDelta /3);
     }
 
     if (!isDeleting && updatedText === fullText) {
@@ -44,7 +44,7 @@ export const Banner = () => {
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
-      setDelta(300);
+      setDelta(150);
       setLoopNum(loopNum + 1);
     }
   }

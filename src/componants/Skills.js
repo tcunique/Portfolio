@@ -51,7 +51,7 @@ export const Skills = () => {
 									Compétences
 								</h2>
 								<p>Durant mes projets et mon cursus académique j'ai développé de nombreuse compétence tel que :</p>
-								<Carousel responsive={responsive} infinite={true} className="skill-slider">
+								<Carousel responsive={responsive} infinite={false} className="skill-slider">
 									<div className="item">
 										<img src={reactjs} alt="Image" />
 										<h5>ReactJS</h5>
