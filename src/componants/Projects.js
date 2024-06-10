@@ -47,13 +47,13 @@ export const Projects = () => {
   const project3 = [
     {
       title: "Compétition Cybathlon",
-      description: `Projet dans le cadre de la compétition Cybathlon en partenariat avec l'ISIR, développement d'une reconnaissance d'obstacle et transcription sur une carte d'occupation de l'espace. \n
+      description: `Projet dans le cadre de la compétition Cybathlon en partenariat avec l'ISIR, développement d'une reconnaissance d'obstacles et transcription sur une carte d'occupation de l'espace afin d'aider les personnes malvoyantes à gagner en autonomie. \n\n
 Date : Septembre 2023 - Mai 2024 \n Outil : Python, ROS, OpenCV, C++.`, 
       imgUrl: projImg5,
     },
     {
-      title: "Jeux vidéos",
-      description: "Développement d'un jeu vidéo en C++ avec la bibliothque SFML. \n\n Date : Décembre 2024 - Janvier 2024 \n Outil : C++, SFML.",
+      title: "Jeu vidéo en C++",
+      description: "Développement d'un jeu vidéo en C++ avec la bibliothque SFML. \n\n Date : Décembre 2023 - Janvier 2024 \n Outil : C++, SFML.",
       imgUrl: projImg4,
     },
   ];
@@ -77,13 +77,13 @@ Date : Septembre 2023 - Mai 2024 \n Outil : Python, ROS, OpenCV, C++.`,
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Certification cybersécurité</Nav.Link>
+                    <Nav.Link eventKey="first">Certifications cybersécurité</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Développement Web</Nav.Link>
+                    <Nav.Link eventKey="second">Développements Web</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Projet école</Nav.Link>
+                    <Nav.Link eventKey="third">Projets scolaires</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>

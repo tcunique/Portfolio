@@ -61,8 +61,9 @@ export const Banner = () => {
             <div ref={ref}  
               className={`fade-in-section ${inView ? 'is-visible' : ''}`}>
               <span className="tagline">Bienvenu sur mon Portfolio</span>
-              <h1 className='banner-text'>{`Bonjour, je suis Thomas, `}<span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Pentester", "Bug Bounty Hunter" ]'></span><span className="wrap">{text}</span></h1>
-              <p>Animé par une grande passion pour la cybersécurité et le développement web, mes stages et mes différents projets m'ont dotés d'une solide capacité de travail et d'autonomie. Je suis actuellement à la recherche d'un stage de 6 mois en pentesting ou dans tout domaine de la cybersécurité début Mars 2025.</p>
+              <h1 className = "hello">Bonjour, je suis Thomas,</h1>
+              <h1 className='banner-text'><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Pentester", "Bug Bounty Hunter" ]'></span><span className="wrap">{text}</span></h1>
+              <p>Animé par une grande passion pour la cybersécurité et le développement web, mes stages et mes différents projets m'ont dotés d'une solide capacité de travail et d'autonomie. Je suis actuellement à la recherche d'un stage de 6 mois en pentesting ou dans tout domaine de la cybersécurité début mars 2025.</p>
               <button onClick={handleButtonClick}><span>Let's Connect <ArrowRightCircle size={25} /></span></button>
           
             </div>
